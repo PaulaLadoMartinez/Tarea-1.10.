@@ -1,4 +1,6 @@
 let myImage = document.getElementById("logo1");
+let myButton = document.querySelector('button');
+let myHeading = document.querySelector('h1');
 
 myImage.onclick = function () {
   let mySrc = myImage.getAttribute("src");
@@ -9,14 +11,26 @@ myImage.onclick = function () {
   }
 }
 
-$(document).ready(function(e) {
-    var width = "+=" + $(document).width();
-    $("#animate").animate({
-    left: width
-  }, 5000, function() {
-    // Animation complete.
-  });
-});
+function setUserName() {
+  let myName = prompt('Introduzca su nombre'); 
+  if(!myName || myName === null) {
+    setUserName();
+  } else {
+    localStorage.setItem('name', myName); 
+    myHeading.innerHTML = 'Netflix, un mundo de fantasía para ti, ' + myName;
+  }
+}
+
+if(! localStorage.getItem('name')) {
+  setUserName(); 
+  } else {
+    let storedName = localStorage.getItem('name'); 
+    myHeading.innerHTML = 'Netflix, un mundo de fantasía para ti,  ' + storedName;
+  }
+
+myButton.onclick = function() {
+  setUserName();
+}
 
 onload = function startAnimation() { 
     var frameHeight = 102; 
@@ -27,30 +41,4 @@ onload = function startAnimation() {
         var frameOffset = (++frame % frames) * -frameHeight; 
         div.style.backgroundPosition = "0px " + frameOffset + "px"; 
     }, 100); 
-} ;
-
-let myButton = document.querySelector('button');
-let myHeading = document.querySelector('h1');
-
-
-
-function setUserName() {
-  let myName = prompt('Introduzca su nombre'); 
-  if(!myName || myName === null) {
-    setUserName();
-  } else {
-    localStorage.setItem('name', myName); 
-    myHeading.innerHTML = 'Netflix, películas para viajar a Matrix, ' + myName;
-  }
-}
-
-if(! localStorage.getItem('name')) {
-  setUserName(); 
-  } else {
-    let storedName = localStorage.getItem('name'); 
-    myHeading.innerHTML = 'Netflix, películas para viajar a Matrix,  ' + storedName;
-  }
-
-myButton.onclick = function() {
-  setUserName();
-}
+};
