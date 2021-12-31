@@ -1,2 +1,2 @@
 # Tarea-1.10.
-Tarea: publicar web en GitHub
+Una página web donde introducimos los principales usos de Netflix y sus ventajas, además de proporcionar un enlace para completar la información.
