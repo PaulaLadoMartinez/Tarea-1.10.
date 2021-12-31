@@ -24,6 +24,21 @@ h1 {
   margin: 0 auto;
 }
 
+#animate {
+    position: relative;
+    border; 1px solid green;
+    background: yellow;
+    width: 100px;
+    height: 100px;
+}
+
+#animation { 
+    background-image: url(http://jumpingfishes.com/dancingpurpleunicorns/charging.png);
+    background-repeat: no-repeat; 
+    height: 102px; 
+    width: 140px; 
+}
+
 p,ul {
   font-size: 100%; 
   font-family: "Readex Pro", sans-serif;
@@ -38,4 +53,5 @@ p,ul {
 
 #duda {
   float: left
+
 }
