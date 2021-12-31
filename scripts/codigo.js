@@ -1,3 +1,14 @@
+let myImage = document.querySelector("img");
+
+myImage.onclick = function () {
+  let mySrc = myImage.getAttribute("src");
+  if(mySrc === "https://icones.pro/wp-content/uploads/2021/04/icone-netflix-symbole-logo-original.png") {
+    myImage.setAttribute ("src", "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Netflix_logo.svg/1280px-Netflix_logo.svg.png");
+  } else{
+    myImage.setAttribute ("src", "https://icones.pro/wp-content/uploads/2021/04/icone-netflix-symbole-logo-original.png");
+  }
+}
+
 let myButton = document.querySelector('button');
 let myHeading = document.querySelector('h1');
 
