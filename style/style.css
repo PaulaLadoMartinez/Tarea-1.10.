@@ -29,6 +29,8 @@ h1 {
     background-repeat: no-repeat; 
     height: 102px; 
     width: 140px; 
+    display: block;
+    margin: 0 auto;
 }
 
 p,ul {
