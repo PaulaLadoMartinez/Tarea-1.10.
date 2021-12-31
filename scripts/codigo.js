@@ -1,4 +1,4 @@
-let myImage = document.querySelector("img");
+let myImage = document.getElementById("logo1");
 
 myImage.onclick = function () {
   let mySrc = myImage.getAttribute("src");
@@ -9,8 +9,30 @@ myImage.onclick = function () {
   }
 }
 
+$(document).ready(function(e) {
+    var width = "+=" + $(document).width();
+    $("#animate").animate({
+    left: width
+  }, 5000, function() {
+    // Animation complete.
+  });
+});
+
+onload = function startAnimation() { 
+    var frameHeight = 102; 
+    var frames = 15; 
+    var frame = 0; 
+    var div = document.getElementById("animation"); 
+    setInterval(function () { 
+        var frameOffset = (++frame % frames) * -frameHeight; 
+        div.style.backgroundPosition = "0px " + frameOffset + "px"; 
+    }, 100); 
+} ;
+
 let myButton = document.querySelector('button');
 let myHeading = document.querySelector('h1');
+
+
 
 function setUserName() {
   let myName = prompt('Introduzca su nombre'); 
