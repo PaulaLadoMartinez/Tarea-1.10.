@@ -35,3 +35,7 @@ p,ul {
   display: block;
   margin: 0 auto;
 }
+
+#duda {
+  float: left
+}
